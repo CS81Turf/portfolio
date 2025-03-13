@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chris Habich - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/chris_headshot.jpg" alt="My image" class="header-img">
+        <h1>Chris Habich</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to my portfolio</h2>
+        <p>I'm a self-taught computer scientist looking to break into the industry. I'm currently working on projects to
+            build my portfolio and learn new skills.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I’m not your average entry-level candidate—I'm a seasoned professional transitioning from the world of lawn
+            care and golf into the dynamic realm of technology. With over 20 years of hands-on experience solving
+            real-world problems, I know how to get the job done.
+        </p>
+        <p>
+            Right now, I’m diving deep into freeCodeCamp.org, building projects on my own, and eagerly paving the way to
+            a new career in tech. My portfolio already includes a weather tracker and even a chemical mixing tool that
+            leverages my industry know-how. Every line of code I write is backed by real-life experience and a passion
+            for learning.
+        </p>
+        <p>
+            I’m a collaborative team player who can tackle challenges of any size—whether it’s a complex algorithm or
+            giving all the free lawn care tips you could ever need! My age and life experience aren’t obstacles; they’re
+            assets that help me adapt to new work environments and overcome fresh challenges with creativity and grit.
+        </p>
+        <p>
+            I’m excited to merge my practical skills with my newfound passion for coding, proving that experience and
+            enthusiasm make a powerful combo in today’s tech world.
+        </p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>WeatherTracker</h3>
+            <img src="images/weather_icon.jpg" alt="WeatherTracker">
+            <p>A web app that tracks weather conditions in various locations. <a
+                    href="https://cs81turf.github.io/weathertracker/" target="_blank">View Project</a></p>
+        </div>
+
+        <div class="project">
+            <h3>CheMixer</h3>
+            <img src="images/chem_icon.jpg" alt="CheMixer2">
+            <p>An app for mixing chemicals accurately for our lawn care company. This is a mobile app, so it won't look
+                good on a computer screen. <a href="https://cs81turf.github.io/chemical-mixing-calculator/"
+                    target="_blank">View Project</a></p>
+        </div>
+    </section>
+
+    <section id="contact" class="centered-section">
+        <h2>Contact</h2>
+        <form action="https://formsubmit.co/chrishabich3@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New Portfolio Contact Request">
+            <input type="hidden" name="_captcha" value="false"> <!-- Optional to disable captcha -->
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+
+        <div id="confirmation-message" style="display: none; margin-top: 20px;">
+            <p>✅ Your message has been sent! I'll be in touch soon.</p>
+    </section>
+
+    <footer>
+        <p>&copy; Chris Habich 2024</p>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevents the default form submission
+
+            const form = e.target;
+
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form)
+            })
+                .then(response => {
+                    if (response.ok) {
+                        document.getElementById('confirmation-message').style.display = 'block';
+                        form.reset();  // Clear the form
+                    } else {
+                        alert('❗ Something went wrong. Please try again.');
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        });
+    </script>
+
+</body>
+
+</html>
