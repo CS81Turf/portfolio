@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chris Habich's portfolio showcasing projects and skills.">
     <title>Chris Habich - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
-        <img src="chris_headshot.jpg" alt="My image" class="header-img">
+        <img src="images/chris_headshot.jpg" alt="My image" class="header-img">
         <h1>Chris Habich</h1>
         <nav>
             <ul>
@@ -21,79 +22,92 @@
             </ul>
         </nav>
     </header>
+    <main>
+        <section id="home">
+            <h2>Welcome to my portfolio</h2>
+            <p>I'm a self-taught computer scientist looking to break into the industry. I'm currently working on
+                projects to
+                build my portfolio and learn new skills.</p>
+        </section>
 
-    <section id="home">
-        <h2>Welcome to my portfolio</h2>
-        <p>I'm a self-taught computer scientist looking to break into the industry. I'm currently working on projects to
-            build my portfolio and learn new skills.</p>
-    </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I’m not your average entry-level candidate—I'm a seasoned professional transitioning from the world of
+                lawn
+                care and golf into the dynamic realm of technology. With over 20 years of hands-on experience solving
+                real-world problems, I know how to get the job done.
+            </p>
+            <p>
+                Right now, I’m diving deep into freeCodeCamp.org, building projects on my own, and eagerly paving the
+                way to
+                a new career in tech. My portfolio already includes a weather tracker and even a chemical mixing tool
+                that
+                leverages my industry know-how. Every line of code I write is backed by real-life experience and a
+                passion
+                for learning.
+            </p>
+            <p>
+                I’m a collaborative team player who can tackle challenges of any size—whether it’s a complex algorithm
+                or
+                giving all the free lawn care tips you could ever need! My age and life experience aren’t obstacles;
+                they’re
+                assets that help me adapt to new work environments and overcome fresh challenges with creativity and
+                grit.
+            </p>
+            <p>
+                I’m excited to merge my practical skills with my newfound passion for coding, proving that experience
+                and
+                enthusiasm make a powerful combo in today’s tech world.
+            </p>
+        </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I’m not your average entry-level candidate—I'm a seasoned professional transitioning from the world of lawn
-            care and golf into the dynamic realm of technology. With over 20 years of hands-on experience solving
-            real-world problems, I know how to get the job done.
-        </p>
-        <p>
-            Right now, I’m diving deep into freeCodeCamp.org, building projects on my own, and eagerly paving the way to
-            a new career in tech. My portfolio already includes a weather tracker and even a chemical mixing tool that
-            leverages my industry know-how. Every line of code I write is backed by real-life experience and a passion
-            for learning.
-        </p>
-        <p>
-            I’m a collaborative team player who can tackle challenges of any size—whether it’s a complex algorithm or
-            giving all the free lawn care tips you could ever need! My age and life experience aren’t obstacles; they’re
-            assets that help me adapt to new work environments and overcome fresh challenges with creativity and grit.
-        </p>
-        <p>
-            I’m excited to merge my practical skills with my newfound passion for coding, proving that experience and
-            enthusiasm make a powerful combo in today’s tech world.
-        </p>
-    </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <article class="project">
+                <h3>WeatherTracker</h3>
+                <img src="images/weather_icon.jpg" alt="WeatherTracker app logo showing clouds and sun">
+                <p>A web app that tracks weather conditions in various locations. <a
+                        href="https://cs81turf.github.io/weathertracker/" target="_blank">View Project</a></p>
+            </article>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>WeatherTracker</h3>
-            <img src="images/weather_icon.jpg" alt="WeatherTracker">
-            <p>A web app that tracks weather conditions in various locations. <a
-                    href="https://cs81turf.github.io/weathertracker/" target="_blank">View Project</a></p>
-        </div>
+            <article class="project">
+                <h3>CheMixer</h3>
+                <img src="images/chem_icon.jpg" alt="CheMixer2 logo showing a beaker and chemical symbols">
+                <p>An app for mixing chemicals accurately for our lawn care company. This is a mobile app, so it won't
+                    look
+                    good on a computer screen. <a href="https://cs81turf.github.io/chemical-mixing-calculator/"
+                        target="_blank">View Project</a></p>
+            </article>
+        </section>
 
-        <div class="project">
-            <h3>CheMixer</h3>
-            <img src="images/chem_icon.jpg" alt="CheMixer2">
-            <p>An app for mixing chemicals accurately for our lawn care company. This is a mobile app, so it won't look
-                good on a computer screen. <a href="https://cs81turf.github.io/chemical-mixing-calculator/"
-                    target="_blank">View Project</a></p>
-        </div>
-    </section>
+        <section id="contact" class="centered-section">
+            <h2>Contact</h2>
+            <form id="contact-form" action="https://formsubmit.co/be4300bb1eed82e11b89dadf9f19fc78" method="POST">
+                <input type="hidden" name="_subject" value="New Portfolio Contact Request">
+                <input type="hidden" name="_captcha" value="false"> <!-- Optional to disable captcha -->
 
-    <section id="contact" class="centered-section">
-        <h2>Contact</h2>
-        <form action="https://formsubmit.co/chrishabich3@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="New Portfolio Contact Request">
-            <input type="hidden" name="_captcha" value="false"> <!-- Optional to disable captcha -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
 
-            <button type="submit">Send</button>
-        </form>
+            <div id="confirmation-message" style="display: none; margin-top: 20px;">
+                <p>✅ Your message has been sent! I'll be in touch soon.</p>
+            </div>
+        </section>
 
-        <div id="confirmation-message" style="display: none; margin-top: 20px;">
-            <p>✅ Your message has been sent! I'll be in touch soon.</p>
-    </section>
+    </main> 
 
     <footer>
-        <p>&copy; Chris Habich 2024</p>
+        <p>&copy; Chris Habich 2025</p>
     </footer>
 
     <script>
