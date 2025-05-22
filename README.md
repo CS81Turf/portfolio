@@ -1,0 +1,1 @@
+This is my portfolio where I'm showcasing what I have learned and am learning in the computer coding world. I showcase some projects I've created and showing off some of the information I've learned along the way. 
