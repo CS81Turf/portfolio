@@ -191,9 +191,17 @@ footer p {
 }
 
 @keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Dark mode toggle button */
@@ -213,4 +221,20 @@ footer p {
 
 .toggle-btn:hover {
     background-color: #ddd;
+}
+
+@media (min-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: hotpink;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        background-color: aquamarine;
+    }
 }
